@@ -19,7 +19,10 @@ export function WhoWeAre() {
 
           {/* Text */}
           <div className="w-full md:w-[43%] px-5 md:pl-10 text-center">
-            <h2 className="font-heading text-[37px] tracking-[0.925px] text-white font-normal mb-4">
+            <h2
+              className="text-[37px] tracking-[0.08em] text-white font-semibold uppercase mb-4"
+              style={{ fontFamily: "'Clash Display', 'Archivo', sans-serif" }}
+            >
               WHO WE ARE
             </h2>
             <p className="text-base leading-6 tracking-[0.8px] text-white font-sans mb-6">

@@ -1,0 +1,220 @@
+- generic [active] [ref=f8e1]:
+  - generic [ref=f8e2]: Free Shipping On All U.S Orders Over $125
+  - banner [ref=f8e5]:
+    - generic [ref=f8e7]:
+      - link [ref=f8e9] [cursor=pointer]:
+        - /url: /
+        - img "Rich Mindset" [ref=f8e10]
+      - navigation [ref=f8e11]:
+        - list [ref=f8e12]:
+          - listitem [ref=f8e13]:
+            - button "Shop All" [ref=f8e15]
+          - listitem [ref=f8e18]:
+            - link "Top sellers" [ref=f8e19] [cursor=pointer]:
+              - /url: "#top-sellers"
+          - listitem [ref=f8e20]:
+            - link "Education" [ref=f8e21] [cursor=pointer]:
+              - /url: "#education"
+          - listitem [ref=f8e22]:
+            - link "About Us" [ref=f8e23] [cursor=pointer]:
+              - /url: "#about"
+          - listitem [ref=f8e24]:
+            - link "Cart" [ref=f8e25] [cursor=pointer]:
+              - /url: "#cart"
+      - generic [ref=f8e26]:
+        - link "Search" [ref=f8e27] [cursor=pointer]:
+          - /url: "#search"
+        - link "Log in" [ref=f8e32] [cursor=pointer]:
+          - /url: "#account"
+        - link "Cart" [ref=f8e37] [cursor=pointer]:
+          - /url: "#cart"
+  - main [ref=f8e42]:
+    - generic [ref=f8e43]:
+      - img "Rich Mindset hero" [ref=f8e45]
+      - generic [ref=f8e48]:
+        - heading "Welcome To The Mindset" [level=1] [ref=f8e49]
+        - link "SHOP NOW" [ref=f8e51] [cursor=pointer]:
+          - /url: "#products"
+    - generic [ref=f8e53]:
+      - heading "New Items" [level=2] [ref=f8e55]
+      - generic [ref=f8e56]:
+        - button "Scroll left" [disabled] [ref=f8e57]
+        - button "Scroll right" [ref=f8e60]
+        - generic [ref=f8e64]:
+          - link "Essential Tee Essential Tee $45.00" [ref=f8e66] [cursor=pointer]:
+            - /url: "#product-1"
+            - img "Essential Tee" [ref=f8e68]
+            - generic [ref=f8e69]:
+              - generic [ref=f8e70]: Essential Tee
+              - generic [ref=f8e71]: $45.00
+          - link "Mindset Hoodie Mindset Hoodie $85.00" [ref=f8e73] [cursor=pointer]:
+            - /url: "#product-2"
+            - img "Mindset Hoodie" [ref=f8e75]
+            - generic [ref=f8e76]:
+              - generic [ref=f8e77]: Mindset Hoodie
+              - generic [ref=f8e78]: $85.00
+          - link "Legacy Polo Legacy Polo $65.00" [ref=f8e80] [cursor=pointer]:
+            - /url: "#product-3"
+            - img "Legacy Polo" [ref=f8e82]
+            - generic [ref=f8e83]:
+              - generic [ref=f8e84]: Legacy Polo
+              - generic [ref=f8e85]: $65.00
+          - link "Daily Crewneck Sold Out Daily Crewneck $75.00" [ref=f8e87] [cursor=pointer]:
+            - /url: "#product-4"
+            - generic [ref=f8e88]:
+              - img "Daily Crewneck" [ref=f8e89]
+              - generic [ref=f8e90]: Sold Out
+            - generic [ref=f8e91]:
+              - generic [ref=f8e92]: Daily Crewneck
+              - generic [ref=f8e93]: $75.00
+    - generic [ref=f8e95]:
+      - heading "Best Sellers" [level=2] [ref=f8e97]
+      - generic [ref=f8e98]:
+        - button "Scroll left" [disabled] [ref=f8e99]
+        - button "Scroll right" [ref=f8e102]
+        - generic [ref=f8e106]:
+          - link "Classic Cap Classic Cap $40.00" [ref=f8e108] [cursor=pointer]:
+            - /url: "#product-5"
+            - img "Classic Cap" [ref=f8e110]
+            - generic [ref=f8e111]:
+              - generic [ref=f8e112]: Classic Cap
+              - generic [ref=f8e113]: $40.00
+          - link "Mindset Socks Mindset Socks $18.00" [ref=f8e115] [cursor=pointer]:
+            - /url: "#product-6"
+            - img "Mindset Socks" [ref=f8e117]
+            - generic [ref=f8e118]:
+              - generic [ref=f8e119]: Mindset Socks
+              - generic [ref=f8e120]: $18.00
+          - link "Legacy Shorts Legacy Shorts $55.00" [ref=f8e122] [cursor=pointer]:
+            - /url: "#product-7"
+            - img "Legacy Shorts" [ref=f8e124]
+            - generic [ref=f8e125]:
+              - generic [ref=f8e126]: Legacy Shorts
+              - generic [ref=f8e127]: $55.00
+          - link "Vision Jacket Sold Out Vision Jacket $120.00" [ref=f8e129] [cursor=pointer]:
+            - /url: "#product-8"
+            - generic [ref=f8e130]:
+              - img "Vision Jacket" [ref=f8e131]
+              - generic [ref=f8e132]: Sold Out
+            - generic [ref=f8e133]:
+              - generic [ref=f8e134]: Vision Jacket
+              - generic [ref=f8e135]: $120.00
+          - link "Daily Tote Daily Tote $35.00" [ref=f8e137] [cursor=pointer]:
+            - /url: "#product-9"
+            - img "Daily Tote" [ref=f8e139]
+            - generic [ref=f8e140]:
+              - generic [ref=f8e141]: Daily Tote
+              - generic [ref=f8e142]: $35.00
+          - link "Mindset Beanie Mindset Beanie $32.00" [ref=f8e144] [cursor=pointer]:
+            - /url: "#product-10"
+            - img "Mindset Beanie" [ref=f8e146]
+            - generic [ref=f8e147]:
+              - generic [ref=f8e148]: Mindset Beanie
+              - generic [ref=f8e149]: $32.00
+    - generic [ref=f8e152]:
+      - link "Shirts Shirts" [ref=f8e153] [cursor=pointer]:
+        - /url: "#shirts"
+        - img "Shirts" [ref=f8e155]
+        - generic [ref=f8e156]: Shirts
+      - link "Hats Hats" [ref=f8e158] [cursor=pointer]:
+        - /url: "#hats"
+        - img "Hats" [ref=f8e160]
+        - generic [ref=f8e161]: Hats
+      - link "Socks Socks" [ref=f8e163] [cursor=pointer]:
+        - /url: "#socks"
+        - img "Socks" [ref=f8e165]
+        - generic [ref=f8e166]: Socks
+      - link "Polos Polos" [ref=f8e168] [cursor=pointer]:
+        - /url: "#polos"
+        - img "Polos" [ref=f8e170]
+        - generic [ref=f8e171]: Polos
+    - link "Education Education" [ref=f8e175] [cursor=pointer]:
+      - /url: "#education"
+      - generic [ref=f8e176]:
+        - img "Education" [ref=f8e177]
+        - generic [ref=f8e178]: Education
+    - generic [ref=f8e179]:
+      - img "Rich Mindset lifestyle" [ref=f8e181]
+      - generic [ref=f8e183]:
+        - paragraph [ref=f8e184]: Trusted by the community. Made for everyday wear.
+        - link "Shop Now" [ref=f8e185] [cursor=pointer]:
+          - /url: "#products"
+    - generic [ref=f8e188]:
+      - img "Rich Mindset lifestyle" [ref=f8e190]
+      - generic [ref=f8e191]:
+        - heading "WHO WE ARE" [level=2] [ref=f8e192]
+        - paragraph [ref=f8e193]: Rich Mindset is a way of life. Inspired by that young and hungry individual looking for purpose through a world of chaos, it's our lifestyle. A commitment to becoming the best version of yourself every single day.
+        - link "Learn More" [ref=f8e194] [cursor=pointer]:
+          - /url: "#about"
+  - contentinfo [ref=f8e195]:
+    - generic [ref=f8e196]:
+      - generic [ref=f8e197]:
+        - generic [ref=f8e198]:
+          - heading "About" [level=2] [ref=f8e199]
+          - paragraph [ref=f8e200]: Rich Mindset... a brand that represents who you are and the legacy you building. A commitment to becoming the best version of yourself every single day.
+          - link "Read more..." [ref=f8e201] [cursor=pointer]:
+            - /url: "#about"
+        - generic [ref=f8e202]:
+          - heading "Information" [level=2] [ref=f8e203]
+          - list [ref=f8e204]:
+            - listitem [ref=f8e205]:
+              - link "Shop All" [ref=f8e206] [cursor=pointer]:
+                - /url: "#shop"
+            - listitem [ref=f8e207]:
+              - link "Top sellers" [ref=f8e208] [cursor=pointer]:
+                - /url: "#top-sellers"
+            - listitem [ref=f8e209]:
+              - link "Education" [ref=f8e210] [cursor=pointer]:
+                - /url: "#education"
+            - listitem [ref=f8e211]:
+              - link "About Us" [ref=f8e212] [cursor=pointer]:
+                - /url: "#about"
+            - listitem [ref=f8e213]:
+              - link "Cart" [ref=f8e214] [cursor=pointer]:
+                - /url: "#cart"
+        - generic [ref=f8e215]:
+          - heading "Store Pages" [level=2] [ref=f8e216]
+          - list [ref=f8e217]:
+            - listitem [ref=f8e218]:
+              - link "Search" [ref=f8e219] [cursor=pointer]:
+                - /url: "#search"
+            - listitem [ref=f8e220]:
+              - link "Contact Us" [ref=f8e221] [cursor=pointer]:
+                - /url: "#contact"
+            - listitem [ref=f8e222]:
+              - link "Size Chart" [ref=f8e223] [cursor=pointer]:
+                - /url: "#size-chart"
+            - listitem [ref=f8e224]:
+              - link "Refund Policy" [ref=f8e225] [cursor=pointer]:
+                - /url: "#refund"
+            - listitem [ref=f8e226]:
+              - link "Shipping Policy" [ref=f8e227] [cursor=pointer]:
+                - /url: "#shipping"
+            - listitem [ref=f8e228]:
+              - link "Terms of Service" [ref=f8e229] [cursor=pointer]:
+                - /url: "#terms"
+            - listitem [ref=f8e230]:
+              - link "Privacy Policy" [ref=f8e231] [cursor=pointer]:
+                - /url: "#privacy"
+        - generic [ref=f8e232]:
+          - heading "THE LAB HOURS" [level=2] [ref=f8e233]
+          - paragraph [ref=f8e234]: 1-4pm (Tues - Fri) / 11-2pm (Sat) / Closed (Sun-Mon)
+          - paragraph [ref=f8e235]: support@richmindset.com
+          - paragraph [ref=f8e236]: San Antonio, TX
+      - generic [ref=f8e237]:
+        - heading "Join the club" [level=2] [ref=f8e238]
+        - generic [ref=f8e239]:
+          - textbox "Enter your email" [ref=f8e240]
+          - button "Subscribe" [ref=f8e241]
+        - generic [ref=f8e245]:
+          - link "Instagram" [ref=f8e246] [cursor=pointer]:
+            - /url: https://www.instagram.com/rich_mindset210
+          - link "Facebook" [ref=f8e250] [cursor=pointer]:
+            - /url: "#facebook"
+          - link "Twitter" [ref=f8e253] [cursor=pointer]:
+            - /url: "#twitter"
+          - link "TikTok" [ref=f8e256] [cursor=pointer]:
+            - /url: "#tiktok"
+          - link "YouTube" [ref=f8e259] [cursor=pointer]:
+            - /url: "#youtube"
+  - button "Open Next.js Dev Tools" [ref=f8e268] [cursor=pointer]

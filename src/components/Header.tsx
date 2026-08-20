@@ -19,7 +19,6 @@ const NAV_LINKS = [
   ]},
   { label: "Top sellers", href: "#top-sellers" },
   { label: "About Us", href: "#about" },
-  { label: "Cart", href: "#cart" },
 ];
 
 export function Header() {
@@ -37,18 +36,16 @@ export function Header() {
 
   return (
     <>
+      <div style={{ height: isSticky ? 64 : 0 }} />
       <header
         className={`bg-white transition-all duration-[400ms] ease-[cubic-bezier(0.165,0.84,0.44,1)] ${
           isSticky
-            ? "fixed top-0 left-0 right-0 z-20 py-[5px] shadow-none translate-y-0"
-            : "relative py-[10px] -translate-y-full"
+            ? "fixed top-0 left-0 right-0 z-20 py-[5px]"
+            : "relative py-[10px]"
         }`}
-        style={{
-          transform: isSticky ? "translateZ(0)" : undefined,
-        }}
       >
         <div className="mx-auto max-w-[1300px] px-10">
-          <div className="grid grid-cols-[1fr_auto_1fr] items-center h-11 md:grid-cols-[450px_1fr_450px]">
+          <div className="grid grid-cols-[minmax(0,450px)_auto_minmax(0,450px)] items-center h-11">
             {/* Logo */}
             <div className="flex items-center">
               <Link href="/" className="block">
@@ -112,10 +109,10 @@ export function Header() {
             <div className="hidden md:flex items-center justify-end gap-4">
               <Link
                 href="#cart"
-                className="flex items-center gap-1 text-[19.52px] tracking-[0.8px] text-[#010101]"
+                aria-label="Cart"
+                className="flex items-center justify-center p-2 text-[#010101]"
               >
                 <CartIcon className="w-5 h-5" />
-                <span>Cart</span>
               </Link>
             </div>
 
