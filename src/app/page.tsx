@@ -3,7 +3,6 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { ProductSlider } from "@/components/ProductSlider";
 import { CategoryTiles } from "@/components/CategoryTiles";
-import { EducationBanner } from "@/components/EducationBanner";
 import { WhoWeAre } from "@/components/WhoWeAre";
 import { Footer } from "@/components/Footer";
 import type { Product, CategoryTile } from "@/types/content";
@@ -41,7 +40,6 @@ export default function Home() {
         <ProductSlider title="New Items" products={NEW_ITEMS} />
         <ProductSlider title="Best Sellers" products={BEST_SELLERS} />
         <CategoryTiles tiles={CATEGORIES} />
-        <EducationBanner />
         <WhoWeAre />
       </main>
       <Footer />
