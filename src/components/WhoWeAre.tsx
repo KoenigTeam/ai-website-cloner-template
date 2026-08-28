@@ -8,13 +8,16 @@ export function WhoWeAre() {
         <div className="flex flex-col md:flex-row items-center justify-between">
           {/* Image */}
           <div className="w-full md:w-[57%] px-5 mb-8 md:mb-0">
-            <Image
-              src="/images/who-we-are.svg"
-              alt="Rich Mindset lifestyle"
-              width={695}
-              height={1042}
-              className="w-full h-auto"
-            />
+            <div className="relative aspect-square md:aspect-[2/3] w-full overflow-hidden bg-black">
+              <Image
+                src="/images/rich-mindset-logo.png"
+                alt="Rich Mindset Streetwear logo"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                quality={90}
+                className="object-contain"
+              />
+            </div>
           </div>
 
           {/* Text */}
