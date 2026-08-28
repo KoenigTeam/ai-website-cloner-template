@@ -58,13 +58,6 @@ export default function RootLayout({
       lang="en"
       className={`${arapey.variable} ${robotoCondensed.variable} h-full antialiased`}
     >
-      <head>
-        <link rel="preconnect" href="https://api.fontshare.com" crossOrigin="anonymous" />
-        <link
-          rel="stylesheet"
-          href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&display=swap"
-        />
-      </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
