@@ -9,6 +9,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-roboto-condensed), "Roboto Condensed", sans-serif;
   --font-heading: var(--font-arapey), "Arapey", serif;
+  --font-wordmark: var(--font-bodoni-moda), "Bodoni Moda", serif;
   --font-mono: ui-monospace, monospace;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -204,7 +205,9 @@
 
 .nav-link-underline {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
   padding: 7.5px 15px;
   text-decoration: none;
   white-space: nowrap;
@@ -271,9 +274,91 @@
 /* ── Announcement marquee ── */
 
 .announcement-marquee {
+  --marquee-duration: 20s;
   display: flex;
   width: max-content;
-  animation: fc-marquee 20s linear infinite;
+  animation: fc-marquee var(--marquee-duration) linear infinite;
+}
+
+.announcement-marquee:hover,
+.announcement-marquee:focus-within {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .announcement-marquee {
+    width: 100%;
+    animation: none;
+    justify-content: center;
+  }
+
+  .announcement-marquee > [aria-hidden="true"] {
+    display: none;
+  }
+}
+
+/* ── Sticky site header ── */
+
+.site-header {
+  background-color: #ffffff;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.site-header[data-stuck="true"] {
+  border-bottom: 1px solid var(--color-border);
+  background-color: rgb(255 255 255 / 0.85);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+  .site-header[data-stuck="true"] {
+    background-color: #ffffff;
+  }
+}
+
+.site-wordmark {
+  font-family: var(--font-wordmark);
+  text-transform: uppercase;
+  font-size: clamp(20px, 2.2vw, 28px);
+  letter-spacing: 0.14em;
+  line-height: 1;
+  transform-origin: left center;
+  transition:
+    transform 0.3s ease,
+    letter-spacing 0.3s ease;
+}
+
+.site-header[data-stuck="true"] .site-wordmark {
+  transform: scale(0.85);
+  letter-spacing: 0.16em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header,
+  .site-wordmark {
+    transition: none;
+  }
+}
+
+/* ── Skip to content ── */
+
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  background: var(--color-btn-primary);
+  color: var(--color-btn-primary-text);
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.skip-to-content:focus {
+  top: 0.5rem;
 }
 
 /* ── Hide scrollbar for overflow scrollers ── */

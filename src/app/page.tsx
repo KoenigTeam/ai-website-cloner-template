@@ -19,7 +19,7 @@ export default function Home() {
     <>
       <AnnouncementBar />
       <Header />
-      <main>
+      <main id="main-content">
         <Hero />
         <ProductGrid />
         <CategoryTiles tiles={CATEGORIES} />

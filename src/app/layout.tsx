@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Bodoni_Moda } from "next/font/google";
 import "./globals.css";
+
+const bodoniModa = Bodoni_Moda({
+  variable: "--font-bodoni-moda",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 const arapey = localFont({
   variable: "--font-arapey",
@@ -56,7 +63,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${arapey.variable} ${robotoCondensed.variable} h-full antialiased`}
+      className={`${arapey.variable} ${robotoCondensed.variable} ${bodoniModa.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

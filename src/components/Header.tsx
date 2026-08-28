@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import {
   CartIcon,
@@ -9,6 +8,7 @@ import {
   CloseIcon,
   ChevronDownIcon,
 } from "./icons";
+import { SiteContainer } from "./SiteContainer";
 
 const NAV_LINKS = [
   { label: "Shop All", href: "#shop", children: [
@@ -17,52 +17,55 @@ const NAV_LINKS = [
     { label: "Socks", href: "#socks" },
     { label: "Polos", href: "#polos" },
   ]},
-  { label: "Top sellers", href: "#top-sellers" },
+  { label: "Top Sellers", href: "#top-sellers" },
   { label: "About Us", href: "#about" },
 ];
 
 export function Header() {
-  const [isSticky, setIsSticky] = useState(false);
+  const [isStuck, setIsStuck] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const sentinelRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsSticky(window.scrollY > 62);
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    const sentinel = sentinelRef.current;
+    if (!sentinel) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsStuck(!entry.isIntersecting),
+      { threshold: 0 }
+    );
+    observer.observe(sentinel);
+    return () => observer.disconnect();
   }, []);
 
   return (
     <>
-      <div style={{ height: isSticky ? 64 : 0 }} />
+      <a href="#main-content" className="skip-to-content">
+        Skip to content
+      </a>
+      {/* Zero-height sentinel: when it scrolls out of view, the header sticks */}
+      <div ref={sentinelRef} aria-hidden="true" />
       <header
-        className={`bg-white transition-all duration-[400ms] ease-[cubic-bezier(0.165,0.84,0.44,1)] ${
-          isSticky
-            ? "fixed top-0 left-0 right-0 z-20 py-[5px]"
-            : "relative py-[10px]"
-        }`}
+        data-stuck={isStuck}
+        className="site-header sticky top-0 z-20"
       >
-        <div className="mx-auto max-w-[1300px] px-10">
-          <div className="grid grid-cols-[minmax(0,450px)_auto_minmax(0,450px)] items-center h-11">
-            {/* Logo */}
+        <SiteContainer>
+          <div
+            className={`grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center transition-[height] duration-300 ${
+              isStuck ? "h-14" : "h-20"
+            }`}
+          >
+            {/* Wordmark */}
             <div className="flex items-center">
-              <Link href="/" className="block">
-                <Image
-                  src="/images/logo.svg"
-                  alt="Rich Mindset"
-                  width={150}
-                  height={39}
-                  className="h-[39px] w-[150px]"
-                  priority
-                />
+              <Link href="/" className="site-wordmark text-[#010101]">
+                Rich Mindset
               </Link>
             </div>
 
             {/* Desktop Nav */}
-            <nav className="hidden md:flex items-center justify-center">
-              <ul className="flex items-center list-none m-0 p-0">
+            <nav aria-label="Primary" className="hidden md:flex items-center justify-center">
+              <ul className="flex items-center gap-1 list-none m-0 p-0">
                 {NAV_LINKS.map((link) => (
                   <li key={link.label} className="relative">
                     {link.children ? (
@@ -72,11 +75,12 @@ export function Header() {
                         onMouseLeave={() => setIsDropdownOpen(false)}
                       >
                         <button
-                          className="nav-link-underline text-[16.52px] font-normal tracking-[0.8px] text-[#111] flex items-center gap-1"
+                          aria-expanded={isDropdownOpen}
+                          className="nav-link-underline text-sm font-normal tracking-[0.8px] text-[#111] flex items-center gap-1"
                           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                         >
                           {link.label}
-                          <ChevronDownIcon className="w-3 h-3" />
+                          <ChevronDownIcon aria-hidden="true" className="w-3 h-3" />
                         </button>
                         {isDropdownOpen && (
                           <div className="absolute top-full left-0 bg-white shadow-[0_10px_20px_rgba(0,0,0,0.09)] py-[13px] pb-[5px] min-w-full grid">
@@ -95,7 +99,7 @@ export function Header() {
                     ) : (
                       <Link
                         href={link.href}
-                        className="nav-link-underline text-[19.52px] font-normal tracking-[0.8px] text-[#010101]"
+                        className="nav-link-underline text-sm font-normal tracking-[0.8px] text-[#010101]"
                       >
                         {link.label}
                       </Link>
@@ -112,7 +116,7 @@ export function Header() {
                 aria-label="Cart"
                 className="flex items-center justify-center p-2 text-[#010101]"
               >
-                <CartIcon className="w-5 h-5" />
+                <CartIcon aria-hidden="true" className="w-5 h-5" />
               </Link>
             </div>
 
@@ -123,11 +127,11 @@ export function Header() {
                 className="p-2"
                 aria-label="Open menu"
               >
-                <MenuIcon className="w-6 h-6" />
+                <MenuIcon aria-hidden="true" className="w-6 h-6" />
               </button>
             </div>
           </div>
-        </div>
+        </SiteContainer>
       </header>
 
       {/* Mobile slide-in menu */}
@@ -148,7 +152,7 @@ export function Header() {
                 <CloseIcon className="w-6 h-6" />
               </button>
             </div>
-            <nav className="p-4">
+            <nav aria-label="Mobile" className="p-4">
               <ul className="list-none m-0 p-0 space-y-2">
                 <li>
                   <Link
