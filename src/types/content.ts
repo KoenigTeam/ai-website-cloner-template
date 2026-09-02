@@ -8,12 +8,6 @@ export interface Product {
   href: string;
 }
 
-export interface CategoryTile {
-  title: string;
-  image: string;
-  href: string;
-}
-
 export interface NavLink {
   label: string;
   href: string;

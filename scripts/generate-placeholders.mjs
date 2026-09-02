@@ -29,11 +29,6 @@ const images = [
   { name: "product-jacket.svg", w: 720, h: 1080, bg: "#2a2a1a", text: "JACKET" },
   { name: "product-tote.svg", w: 720, h: 1080, bg: "#1a1a1a", text: "TOTE" },
   { name: "product-beanie.svg", w: 720, h: 1080, bg: "#0a0a1a", text: "BEANIE" },
-  // Category tiles
-  { name: "cat-shirts.svg", w: 550, h: 550, bg: "#071317", text: "SHIRTS" },
-  { name: "cat-hats.svg", w: 550, h: 550, bg: "#02a0a0", text: "HATS" },
-  { name: "cat-socks.svg", w: 550, h: 550, bg: "#1a1a1a", text: "SOCKS" },
-  { name: "cat-polos.svg", w: 550, h: 550, bg: "#ffbd65", text: "POLOS", textColor: "#071317" },
   // Education banner
   { name: "education.svg", w: 460, h: 460, bg: "#02a0a0", text: "LEARN" },
   // Who We Are
