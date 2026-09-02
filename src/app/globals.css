@@ -274,7 +274,10 @@
 /* ── Announcement marquee ── */
 
 .announcement-marquee {
-  --marquee-duration: 20s;
+  /* Two identical groups of 8 copies = 3639.5px per group (measured at 1474px viewport);
+     3639.5px ÷ ~24px/s ≈ 152s. The -50% translate wraps by exactly one group width,
+     so the loop is seamless. */
+  --marquee-duration: 152s;
   display: flex;
   width: max-content;
   animation: fc-marquee var(--marquee-duration) linear infinite;
@@ -292,7 +295,9 @@
     justify-content: center;
   }
 
-  .announcement-marquee > [aria-hidden="true"] {
+  /* Keep only the first copy of group 1; hide the rest of the track. */
+  .announcement-marquee > [aria-hidden="true"],
+  .announcement-marquee > div:first-child > span:not(:first-child) {
     display: none;
   }
 }
