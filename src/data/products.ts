@@ -38,14 +38,14 @@ export const products: Product[] = [
   // Tees (8)
   {
     id: "tee-01",
-    title: "Placeholder Tee 01",
-    price: 20,
+    title: "RM Large Logo",
+    price: 35,
     category: "Tees",
     image: {
-      src: "/images/products/product-01.jpg",
-      alt: "Placeholder studio photo of a folded plain t-shirt on a neutral background",
-      width: 720,
-      height: 1080,
+      src: "/images/products/tees-01-rm-black.jpg",
+      alt: "Black oversized crewneck t-shirt with a white gothic RM large logo on the chest, RICH MINDSET text on the collar, and a red side tag",
+      width: 1080,
+      height: 1620,
     },
     href: "#tee-01",
   },
