@@ -64,6 +64,19 @@ export const products: Product[] = [
   },
   {
     id: "tee-03",
+    title: "RM Large Logo - Beige",
+    price: 40,
+    category: "Tees",
+    image: {
+      src: "/images/products/tees-01-rm-beige.jpg",
+      alt: "Beige oversized crewneck t-shirt with a white gothic RM large logo on the chest, RICH MINDSET text on the collar, and a red side tag",
+      width: 1080,
+      height: 1620,
+    },
+    href: "#tee-03",
+  },
+  {
+    id: "tee-03",
     title: "Placeholder Tee 03",
     price: 24,
     category: "Tees",
