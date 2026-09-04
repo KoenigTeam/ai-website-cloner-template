@@ -6,8 +6,6 @@
  * category names in components.
  *
  * `price` is a plain number in USD dollars (e.g. 45 renders as "$45.00").
- *
- * When real products land, set PLACEHOLDER_PRODUCTS to false.
  */
 
 export interface Product {
@@ -26,8 +24,6 @@ export interface Product {
   href?: string;
 }
 
-export const PLACEHOLDER_PRODUCTS = true;
-
 /** Number of products visible on initial load per category. */
 export const DEFAULT_VISIBLE_COUNT = 6;
 
@@ -35,7 +31,7 @@ export const DEFAULT_VISIBLE_COUNT = 6;
 export const LOAD_MORE_INCREMENT = 6;
 
 export const products: Product[] = [
-  // Tees (8)
+  // Tees (5)
   {
     id: "tee-01",
     title: "RM Large Logo",
@@ -76,176 +72,71 @@ export const products: Product[] = [
     href: "#tee-03",
   },
   {
-    id: "tee-03",
-    title: "Placeholder Tee 03",
-    price: 24,
-    category: "Tees",
-    image: {
-      src: "/images/products/product-03.jpg",
-      alt: "Placeholder studio photo of a plain long-sleeve t-shirt laid flat",
-      width: 720,
-      height: 1080,
-    },
-    href: "#tee-03",
-  },
-  {
     id: "tee-04",
-    title: "Placeholder Tee 04",
-    price: 26,
+    title: "RM Large Logo - Blue",
+    price: 40,
     category: "Tees",
     image: {
-      src: "/images/products/product-04.jpg",
-      alt: "Placeholder studio photo of a pocket t-shirt on a neutral background",
-      width: 720,
-      height: 1080,
+      src: "/images/products/tee-02-richmindset-blue.jpg",
+      alt: "Royal blue oversized crewneck t-shirt shown front and back with a white gothic RM logo and Rich Mindset text on the chest and a vertical Rich Mindset back print",
+      width: 1080,
+      height: 1620,
     },
     href: "#tee-04",
   },
   {
     id: "tee-05",
-    title: "Placeholder Tee 05",
-    price: 28,
+    title: "Faith, Wisdom & Discipline Tee",
+    price: 40,
     category: "Tees",
     image: {
-      src: "/images/products/product-05.jpg",
-      alt: "Placeholder studio photo of a v-neck t-shirt folded on a neutral surface",
-      width: 720,
-      height: 1080,
+      src: "/images/products/tee-03-discipline-black.jpg",
+      alt: "Black oversized crewneck t-shirt shown front and back with a small Rich Mindset chest print and a large Rich Mindset Faith, Wisdom & Discipline back graphic",
+      width: 1080,
+      height: 1620,
     },
     href: "#tee-05",
   },
-  {
-    id: "tee-06",
-    title: "Placeholder Tee 06",
-    price: 30,
-    category: "Tees",
-    image: {
-      src: "/images/products/product-06.jpg",
-      alt: "Placeholder studio photo of a graphic-free crewneck t-shirt on a hanger",
-      width: 720,
-      height: 1080,
-    },
-    href: "#tee-06",
-  },
-  {
-    id: "tee-07",
-    title: "Placeholder Tee 07",
-    price: 32,
-    category: "Tees",
-    image: {
-      src: "/images/products/product-07.jpg",
-      alt: "Placeholder studio photo of an oversized t-shirt laid flat on a neutral background",
-      width: 720,
-      height: 1080,
-    },
-    href: "#tee-07",
-  },
-  {
-    id: "tee-08",
-    title: "Placeholder Tee 08",
-    price: 34,
-    category: "Tees",
-    image: {
-      src: "/images/products/product-08.jpg",
-      alt: "Placeholder studio photo of a plain white t-shirt against a neutral wall",
-      width: 720,
-      height: 1080,
-    },
-    href: "#tee-08",
-  },
-  // Hoodies (4)
-  {
-    id: "hoodie-01",
-    title: "Placeholder Hoodie 01",
-    price: 60,
-    category: "Hoodies",
-    image: {
-      src: "/images/products/product-09.jpg",
-      alt: "Placeholder studio photo of a pullover hoodie on a neutral background",
-      width: 720,
-      height: 1080,
-    },
-    href: "#hoodie-01",
-  },
-  {
-    id: "hoodie-02",
-    title: "Placeholder Hoodie 02",
-    price: 65,
-    category: "Hoodies",
-    image: {
-      src: "/images/products/product-10.jpg",
-      alt: "Placeholder studio photo of a zip-up hoodie on a hanger",
-      width: 720,
-      height: 1080,
-    },
-    href: "#hoodie-02",
-  },
-  {
-    id: "hoodie-03",
-    title: "Placeholder Hoodie 03",
-    price: 70,
-    category: "Hoodies",
-    image: {
-      src: "/images/products/product-11.jpg",
-      alt: "Placeholder studio photo of a heavyweight hoodie laid flat",
-      width: 720,
-      height: 1080,
-    },
-    href: "#hoodie-03",
-  },
-  {
-    id: "hoodie-04",
-    title: "Placeholder Hoodie 04",
-    price: 75,
-    category: "Hoodies",
-    image: {
-      src: "/images/products/product-12.jpg",
-      alt: "Placeholder studio photo of a dark-colored hoodie against a neutral wall",
-      width: 720,
-      height: 1080,
-    },
-    href: "#hoodie-04",
-  },
-  // Headwear (2)
+  // Headwear (1)
   {
     id: "cap-01",
-    title: "Placeholder Cap 01",
+    title: "RM Logo Cap - Black",
     price: 30,
     category: "Headwear",
     image: {
-      src: "/images/products/product-13.jpg",
-      alt: "Placeholder studio photo of a plain baseball cap on a neutral background",
-      width: 720,
-      height: 1080,
+      src: "/images/products/cap-01-rm-black.jpg",
+      alt: "Black trucker cap with white gothic Rich Mindset embroidery on the front, Faith Wisdom Discipline text on the mesh side, and a red underbrim",
+      width: 1080,
+      height: 1620,
     },
     href: "#cap-01",
   },
-  {
-    id: "cap-02",
-    title: "Placeholder Beanie 02",
-    price: 25,
-    category: "Headwear",
-    image: {
-      src: "/images/products/product-14.jpg",
-      alt: "Placeholder studio photo of a folded knit beanie on a neutral surface",
-      width: 720,
-      height: 1080,
-    },
-    href: "#cap-02",
-  },
-  // Accessories (1)
+  // Accessories (2)
   {
     id: "acc-01",
-    title: "Placeholder Tote 01",
-    price: 35,
+    title: "Sea Salt Spray",
+    price: 20,
     category: "Accessories",
     image: {
-      src: "/images/products/product-15.jpg",
-      alt: "Placeholder studio photo of a canvas tote bag hanging against a neutral wall",
-      width: 720,
-      height: 1080,
+      src: "/images/products/acc-01-seasalt.jpg",
+      alt: "White Rich Mindset sea salt spray bottle with a black trigger sprayer on a blue studio background",
+      width: 1080,
+      height: 1620,
     },
     href: "#acc-01",
+  },
+  {
+    id: "acc-02",
+    title: "Hair Spray",
+    price: 20,
+    category: "Accessories",
+    image: {
+      src: "/images/products/acc-02-hairspray.jpg",
+      alt: "White Rich Mindset hair spray bottle with a black mist sprayer and clear cap on a blue studio background",
+      width: 1080,
+      height: 1620,
+    },
+    href: "#acc-02",
   },
 ];
 

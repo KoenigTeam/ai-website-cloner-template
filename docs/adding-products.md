@@ -30,9 +30,9 @@ All product data lives in **one file**: `src/data/products.ts`. Adding or editin
 - The filter bar is **derived from the data** — using a new `category` value on any product automatically adds a new filter pill. Never hardcode category names in components.
 - Category order follows first appearance in the `products` array.
 
-## Placeholders
+## Counts
 
-- `PLACEHOLDER_PRODUCTS` is currently `true`. Once real products replace the placeholders, set it to `false`.
+- Legacy placeholder products were removed on 2026-09-04; only real products remain in the catalogue.
 - Visible-item counts are controlled by two exported constants in the same file:
   - `DEFAULT_VISIBLE_COUNT = 6` — items visible on load per category
   - `LOAD_MORE_INCREMENT = 6` — items revealed per "Load more" click

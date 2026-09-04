@@ -4,7 +4,8 @@
 ## Product grid note
 - Data module: src/data/products.ts. Add/edit products there only.
 - Counts: DEFAULT_VISIBLE_COUNT = 6, LOAD_MORE_INCREMENT = 6 (exported from the data module).
-- Render-all-then-hide: every product is rendered into the DOM; overflow is hidden with the `hidden` attribute. Never `.slice()`. PLACEHOLDER_PRODUCTS must be `false` once real products land.
+- Render-all-then-hide: every product is rendered into the DOM; overflow is hidden with the `hidden` attribute. Never `.slice()`.
+- Legacy placeholder products and images were removed on 2026-09-04; only real products remain.
 
 ## PROJECT STATUS (updated 2026-08-14)
 - Forked from ai-website-cloner-template (JCodesMore) for a new client site build.
